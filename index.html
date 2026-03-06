@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Confession Mail</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(135deg,#f8d7da,#ffe6f0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mail icon button */
+#mailIcon {
+    font-size: 60px;
+    cursor: pointer;
+    color: #d63384;
+    transition: transform 0.3s;
+}
+
+#mailIcon:hover {
+    transform: scale(1.2);
+}
+
+/* Modal overlay */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; /* hidden initially */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background: white;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #d63384;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+}
+
+.heart {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Mail icon -->
+<div id="mailIcon">📧</div>
+
+<!-- Modal -->
+<div class="modal" id="mailModal">
+  <div class="modal-content">
+    <span class="close" id="closeBtn">&times;</span>
+
+    <h1>A Letter From My Heart</h1>
+
+    <p>
+    If I could wish for one thing in my life, it would be to have you in my arms, even if just for a moment. Not because I want to take anything from you, but because being close to you feels like the one place where everything in my world would make sense.
+    </p>
+
+    <p>
+    For the longest time, I have quietly watched you from afar. Not in a way that crosses boundaries or makes you uncomfortable, but in a quiet and harmless way that comes from admiration and care. Sometimes I notice the way you laugh with your friends, the way you smile when something genuinely makes you happy, and the way you carry yourself so naturally. Those small moments somehow stay with me longer than they should.
+    </p>
+
+    <p>
+    At first, I thought what I felt was simple admiration. I told myself it was nothing more than noticing someone kind and genuine. But as time passed, I realized that my feelings were slowly becoming something deeper. It didn’t happen all at once. It happened little by little, until one day I understood that my heart had already chosen you without me even realizing it.
+    </p>
+
+    <p>
+    What I feel for you is not just about how beautiful you are, although you truly are. It’s the way your presence brightens a room without you trying. It’s the sincerity in your smile, and the warmth in your eyes that makes people feel comfortable around you. Those little things may seem ordinary to others, but to me they feel extraordinary.
+    </p>
+
+    <p>
+    Sometimes when I see you, my heart skips a beat in a way I cannot explain. I tried to ignore these feelings before, thinking maybe it was better to keep them quiet. But no matter how much I try, they always come back. Because the truth is, you have become someone very special to me.
+    </p>
+
+    <p>
+    I know that you might like someone else, and I understand that reality. It hurts sometimes, but I accept it. Even so, I do not regret caring about you. Seeing you happy somehow makes my own day brighter, even if you never realize it.
+    </p>
+
+    <p>
+    If life were different, maybe I would be the person you think about before you fall asleep. Maybe I would be the one you look for in a crowded room, the one you share your stories and laughter with. I imagine what that would feel like sometimes, because the thought of it brings warmth to my heart.
+    </p>
+
+    <p>
+    But even if that never happens, I will still quietly support you. I will always hope that you achieve your dreams, that you find happiness, and that life treats you kindly. My feelings may not change the world around us, but they are real and they come from honesty.
+    </p>
+
+    <p>
+    So I want to keep this simple and truthful. I have feelings for you. Not just as a friend, but as someone who is truly special to me. Maybe it sounds crazy, but it is the truth in my heart.
+    </p>
+
+    <p>
+    No matter how much the world changes, no matter how time moves forward, a part of me will always remember the way you made my heart feel. Because out of all the people in this world, somehow, my heart chose you.
+    </p>
+
+    <div class="heart">❤</div>
+
+    <div class="signature">
+    From someone who truly cares
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Get elements
+const modal = document.getElementById("mailModal");
+const mailIcon = document.getElementById("mailIcon");
+const closeBtn = document.getElementById("closeBtn");
+
+// Show modal when clicking the mail icon
+mailIcon.onclick = function() {
+    modal.style.display = "flex";
+}
+
+// Close modal when clicking the close button
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function(event) {
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
